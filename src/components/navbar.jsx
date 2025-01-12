@@ -12,9 +12,7 @@ export const Navbar = () => {
           height={60}
           alt="Picture of the author"
         />
-        <p className="text-xl text-[#CE4420] font-semibold">
-          Oxford Study and Consultancy
-        </p>
+        <p className="text-xl font-semibold">Oxford Study & Consultancy</p>
       </div>
 
       <div className="flex gap-x-2">
