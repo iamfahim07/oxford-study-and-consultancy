@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Oxford Study And Consultancy",
+  title: "Oxford Study & Consultancy",
   description: "A consultancy firm where you can receive career guidance.",
 };
 
