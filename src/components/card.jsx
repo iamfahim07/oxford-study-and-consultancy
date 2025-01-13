@@ -1,9 +1,4 @@
-interface CardProps {
-  title: string;
-  description: string;
-}
-
-export const Card = ({ title, description }: CardProps) => {
+export const Card = ({ title, description }) => {
   return (
     <div className="bg-white shadow-xl p-6 text-center rounded-xl">
       <div
