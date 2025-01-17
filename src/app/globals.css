@@ -70,3 +70,20 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .bg-cream {
+    background-color: #fff2e1;
+  }
+
+  .text-darken {
+    color: #2f327d;
+  }
+
+  .bg-yellow-500 {
+    background-color: #f48c06;
+  }
+  .text-yellow-500 {
+    color: #f48c06;
+  }
+}
