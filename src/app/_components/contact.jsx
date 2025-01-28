@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export const Contact = () => {
   return (
-    <div className="p-20">
+    <div className="max-md:px-4 max-md:py-20 md:p-20">
       <div className="max-w-4xl mx-auto text-center mb-10">
         <h1 className="font-bold text-darken mb-2 text-3xl">
           {" "}
@@ -22,12 +22,12 @@ export const Contact = () => {
         <div className="w-full lg:w-1/2">
           <div>
             <h1 className="text-darken font-bold text-2xl">Get in touch</h1>
-            <p className="leading-relaxed text-gray-500 text-xl">
+            <p className="leading-relaxed text-gray-500 text-lg md:text-xl">
               Feel free to contact us and we will get back to you as soon as
               possible
             </p>
 
-            <div className="flex justify-start items-center gap-2 mt-4">
+            <div className="flex justify-start items-center gap-2 mt-8">
               <svg
                 className="h-5 w-5"
                 fill="#2f327d"
@@ -38,7 +38,7 @@ export const Contact = () => {
               </svg>
               <p className="text-gray-500 font-semibold">+8801711742861</p>
             </div>
-            <div className="flex justify-start items-center gap-2 mt-4">
+            <div className="flex justify-start items-center gap-2 mt-2">
               <svg
                 className="h-5 w-5"
                 fill="#2f327d"
@@ -59,7 +59,7 @@ export const Contact = () => {
           <div className="mt-10">
             <h1 className="text-darken font-bold text-2xl">Connect with us</h1>
 
-            <div className="flex justify-start items-center gap-2 mt-4">
+            <div className="flex justify-start items-center gap-2 mt-2">
               <svg
                 className="h-10 w-10 hover:scale-110 transition-all"
                 fill="#2f327d"

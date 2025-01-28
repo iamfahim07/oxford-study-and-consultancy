@@ -8,13 +8,13 @@ import {
 
 export const CountriesWeWorkWith = () => {
   return (
-    <div className="p-20 bg-cream">
+    <div className="max-md:px-4 max-md:py-20 md:p-20 bg-cream">
       <div className="max-w-4xl mx-auto text-center mb-10">
         <h1 className="font-bold text-darken mb-2 text-3xl">
           {" "}
           <span className="text-yellow-500">Countries</span> We Offer Support
         </h1>
-        <p className="leading-relaxed text-gray-500">
+        <p className="leading-relaxed text-gray-500 text-justify md:text-center">
           We provide comprehensive support for visa processing and admission
           assistance in the following countries. Our dedicated team ensures a
           seamless experience, guiding you through every step of the application
@@ -23,7 +23,7 @@ export const CountriesWeWorkWith = () => {
           achieve your academic and professional goals.
         </p>
       </div>
-      <Carousel>
+      <Carousel className="max-md:relative">
         <CarouselContent>
           <CarouselItem className="md:basis-1/2 lg:basis-1/3">
             <Card src="/usa.jpeg" name="USA" />
@@ -40,10 +40,13 @@ export const CountriesWeWorkWith = () => {
           <CarouselItem className="md:basis-1/2 lg:basis-1/3">
             <Card src="/denmark.avif" name="Denmark" />
           </CarouselItem>
+          <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+            <Card src="/europe.jpg" name="Europe" />
+          </CarouselItem>
         </CarouselContent>
 
-        <CarouselPrevious className="size-10" />
-        <CarouselNext className="size-10" />
+        <CarouselPrevious className="size-10 max-md:absolute max-md:z-50 max-md:left-[calc(100%-90px)] max-md:top-[108%]" />
+        <CarouselNext className="size-10 max-md:absolute max-md:z-50 max-md:right-[-4px] max-md:top-[108%]" />
       </Carousel>
     </div>
   );
