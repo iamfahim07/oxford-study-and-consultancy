@@ -15,13 +15,13 @@ import {
 
 export const Services = () => {
   return (
-    <div className="container px-20 lg:px-12 mx-auto max-w-screen-xl text-gray-700 overflow-x-hidden pb-20">
+    <div className="container px-4 lg:px-12 mx-auto max-w-screen-xl text-gray-700 overflow-x-hidden pb-20">
       {/* <!-- Services --> */}
       <div className="max-w-4xl mx-auto text-center">
         <h1 className="font-bold text-darken my-3 text-3xl">
           <span className="text-yellow-500">What</span> We Bring to the Table
         </h1>
-        <p className="leading-relaxed text-gray-500">
+        <p className="text-justify md:text-center leading-relaxed text-gray-500">
           We specialize in student visa consultancy, guiding aspiring students
           toward achieving their dreams of studying abroad. From university
           applications to visa processing, our expert team ensures a smooth
@@ -133,12 +133,12 @@ export const Services = () => {
         </div>
       </div> */}
 
-      <Carousel>
-        <CarouselContent className="mt-20 mb-6">
-          <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-            <div className="h-full bg-white shadow-xl p-6 text-center rounded-xl">
+      <Carousel className="max-md:relative max-md:flex max-md:flex-col">
+        <CarouselContent className="mt-20 mb-6 max-md:flex max-md:flex-col max-md:gap-4">
+          <CarouselItem className="md:basis-1/2 lg:basis-1/3 max-md:mb-12">
+            <div className="h-full bg-white shadow-xl max-md:pb-6 md:p-6 text-center rounded-xl">
               <StudyAbroadIcon />
-              <h1 className="flex flex-col font-medium text-xl mb-3 lg:px-14 text-darken">
+              <h1 className="flex flex-col font-medium text-xl max-md:-mt-5 mb-3 lg:px-14 text-darken">
                 Study Abroad
                 <span className="text-sm text-yellow-500">
                   Student visa processing
@@ -147,7 +147,7 @@ export const Services = () => {
               <p className="px-4 text-gray-500 text-justify">
                 We take immense pride in providing exceptional visa services for
                 the <span className="text-yellow-500 font-bold">UK</span>,{" "}
-                <span className="text-yellow-500 font-bold">USA</span>,
+                <span className="text-yellow-500 font-bold">USA</span>,{" "}
                 <span className="text-yellow-500 font-bold">Australia</span>,{" "}
                 <span className="text-yellow-500 font-bold">Canada</span>, and{" "}
                 <span className="text-yellow-500 font-bold">Denmark</span>,
@@ -163,10 +163,10 @@ export const Services = () => {
             </div>
           </CarouselItem>
 
-          <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-            <div className="h-full bg-white shadow-xl p-6 text-center rounded-xl">
+          <CarouselItem className="md:basis-1/2 lg:basis-1/3  max-md:mb-12">
+            <div className="h-full bg-white shadow-xl max-md:pb-6 md:p-6 text-center rounded-xl">
               <IeltsIcon />
-              <h1 className="font-medium text-xl mb-3 lg:px-14 text-darken">
+              <h1 className="font-medium text-xl max-md:-mt-5 mb-3 lg:px-14 text-darken">
                 IELTS
               </h1>
               <p className="px-4 text-gray-500 text-justify">
@@ -176,8 +176,8 @@ export const Services = () => {
                   Basic to Advanced IELTS Course
                 </span>{" "}
                 is an in-depth program that covers every aspect of the exam,
-                from foundational skills to advanced strategies, ensuring you’re
-                fully prepared to achieve your desired score. For those with
+                from foundational skills to advanced strategies, ensuring you
+                are fully prepared to achieve your desired score. For those with
                 limited time, our{" "}
                 <span className="text-yellow-500 font-bold">
                   IELTS Crash Course
@@ -192,10 +192,10 @@ export const Services = () => {
             </div>
           </CarouselItem>
 
-          <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-            <div className="h-full bg-white shadow-xl p-6 text-center rounded-xl">
+          <CarouselItem className="md:basis-1/2 lg:basis-1/3  max-md:mb-12">
+            <div className="h-full bg-white shadow-xl max-md:pb-6 md:p-6 text-center rounded-xl">
               <EnglishCoursesIcon />
-              <h1 className="font-medium text-xl mb-3 lg:px-14 text-darken">
+              <h1 className="font-medium text-xl max-md:-mt-5 mb-3 lg:px-14 text-darken">
                 English courses
               </h1>
               <p className="px-4 text-gray-500 text-justify">
@@ -226,10 +226,10 @@ export const Services = () => {
             </div>
           </CarouselItem>
 
-          <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-            <div className="h-full bg-white shadow-xl p-6 text-center rounded-xl">
+          <CarouselItem className="md:basis-1/2 lg:basis-1/3  max-md:mb-12">
+            <div className="h-full bg-white shadow-xl max-md:pb-6 md:p-6 text-center rounded-xl">
               <AdmissionHelpIcon />
-              <h1 className="font-medium text-xl mb-3 lg:px-14 text-darken">
+              <h1 className="font-medium text-xl max-md:-mt-5 mb-3 lg:px-14 text-darken">
                 Admission Help
               </h1>
               <p className="px-4 text-gray-500 text-justify">
@@ -248,9 +248,9 @@ export const Services = () => {
           </CarouselItem>
 
           <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-            <div className="h-full bg-white shadow-xl p-6 text-center rounded-xl">
+            <div className="h-full bg-white shadow-xl max-md:pb-6 md:p-6 text-center rounded-xl">
               <FreeCounsellingIcon />
-              <h1 className="font-medium text-xl mb-3 lg:px-14 text-darken">
+              <h1 className="font-medium text-xl max-md:-mt-5 mb-3 lg:px-14 text-darken">
                 Free Counselling
               </h1>
               <p className="px-4 text-gray-500 text-justify">
@@ -265,8 +265,8 @@ export const Services = () => {
             </div>
           </CarouselItem>
         </CarouselContent>
-        <CarouselPrevious className="size-10" />
-        <CarouselNext className="size-10" />
+        <CarouselPrevious className="size-10 max-md:absolute max-md:z-50 max-md:left-[-4px] max-md:hidden" />
+        <CarouselNext className="size-10 max-md:absolute max-md:z-50 max-md:right-[-4px] max-md:hidden" />
       </Carousel>
     </div>
   );

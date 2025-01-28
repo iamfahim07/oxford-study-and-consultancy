@@ -1,13 +1,15 @@
+import Image from "next/image";
+
 export const HeroSection = () => {
   return (
     <div className="bg-cream">
-      <div className="max-w-screen-xl px-8 mx-auto flex flex-col lg:flex-row items-start">
+      <div className="max-w-screen-xl px-0 md:px-8 mx-auto flex flex-col lg:flex-row items-start">
         {/* <!--Left Col--> */}
         <div className="flex flex-col w-full lg:w-6/12 justify-center lg:pt-24 items-start text-center lg:text-left mb-5 md:mb-0">
-          <h1 className="my-4 text-5xl font-bold leading-tight text-darken">
+          <h1 className="w-full my-4 text-[40px] md:text-5xl font-bold leading-tight text-darken max-lg:text-center">
             <span className="text-yellow-500">Oxford</span> Study & Consultancy
           </h1>
-          <p className="leading-normal text-2xl mb-8">
+          <p className="leading-normal text-xl md:text-2xl mb-8">
             Your dream of studying abroad starts right here, where opportunities
             meet preparation, and your future begins to take shape
           </p>
@@ -18,12 +20,21 @@ export const HeroSection = () => {
           </div>
         </div>
         {/* <!--Right Col--> */}
-        <div className="flex justify-center items-center w-full lg:w-6/12 relative">
-          <img className="w-[560px] -translate-x-24" src="boy.png" />
+        <div className="flex justify-center items-center w-full lg:w-6/12 relative overflow-hidden">
+          <Image
+            className="w-[560px] -translate-x-24"
+            width={560}
+            height={560}
+            src="/boy.png"
+            alt="Boy image"
+          />
 
-          <img
+          <Image
             className="w-[540px] absolute translate-x-24 translate-y-4"
-            src="girl.png"
+            width={540}
+            height={540}
+            src="/girl.png"
+            alt="Girl image"
           />
         </div>
       </div>
