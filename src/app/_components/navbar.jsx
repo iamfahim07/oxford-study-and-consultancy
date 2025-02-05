@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const Navbar = () => {
   return (
     <div className="w-full text-gray-700 bg-cream">
@@ -25,31 +27,31 @@ export const Navbar = () => {
         </div>
 
         <nav className="h-0 md:h-auto flex flex-col flex-grow md:items-center pb-4 md:pb-0 md:flex md:justify-end md:flex-row origin-top duration-300 *:transition">
-          <a
+          <Link
             className="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline hover:scale-110"
-            href="#"
+            href="#home"
           >
             Home
-          </a>
+          </Link>
 
-          <a
+          <Link
             className="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline hover:scale-110"
-            href="#"
+            href="#services"
           >
             Services
-          </a>
-          <a
+          </Link>
+          <Link
             className="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline hover:scale-110"
-            href="#"
+            href="#about-us"
           >
             About Us
-          </a>
-          <a
+          </Link>
+          <Link
             className="px-10 py-3 mt-2 text-sm text-center bg-yellow-500 text-white rounded-full md:mt-8 md:ml-4 hover:scale-110"
-            href="#"
+            href="#contact"
           >
             Contact
-          </a>
+          </Link>
         </nav>
       </div>
     </div>

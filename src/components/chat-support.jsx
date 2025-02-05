@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { Bot, Send, UserRound } from "lucide-react";
+import { MessageSquareText, Send, UserRound } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 import { Button } from "@/components/ui/button";
@@ -175,7 +175,11 @@ export default function ChatSupport() {
   return (
     <ExpandableChat
       icon={
-        <Bot className="h-6 w-6" style={{ width: "24px", height: "24px" }} />
+        // <Bot className="h-6 w-6" style={{ width: "24px", height: "24px" }} />
+        <MessageSquareText
+          className="h-6 w-6"
+          style={{ width: "24px", height: "24px" }}
+        />
       }
       size="lg"
       position="bottom-right"
