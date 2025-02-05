@@ -1,7 +1,7 @@
 export const AboutUs = () => {
   return (
     <div
-      className="container px-4 lg:px-12 mx-auto max-w-screen-xl text-gray-700 overflow-x-hidden pb-20"
+      className="container px-4 lg:px-12 mx-auto max-w-screen-xl text-gray-700 overflow-x-hidden py-20"
       id="about-us"
     >
       {/* <!-- About us --> */}
@@ -24,8 +24,8 @@ export const AboutUs = () => {
       <div className="sm:flex items-center gap-8 sm:space-x-8 mt-14">
         <div className="relative">
           {/* <div className="bg-yellow-500 rounded-full absolute w-12 h-12 z-0 -left-4 -top-3 animate-pulse"></div> */}
-          <h1 className="font-semibold text-2xl text-center relative z-50 text-darken">
-            <span className="text-yellow-500">Our</span> Expertise
+          <h1 className="font-semibold text-2xl relative z-50 text-darken">
+            Our <span className="text-yellow-500">Expertise</span>
           </h1>
           <p className="py-5 text-justify">
             Our experienced team specializes in providing comprehensive visa
@@ -100,8 +100,8 @@ export const AboutUs = () => {
       <div className="sm:flex items-center gap-8 sm:space-x-8 mt-14">
         <div className="relative">
           {/* <div className="bg-yellow-500 rounded-full absolute w-12 h-12 z-0 -left-4 -top-3 animate-pulse"></div> */}
-          <h1 className="font-semibold text-2xl text-center relative z-50 text-darken">
-            <span className="text-yellow-500">Our</span> Commitment
+          <h1 className="font-semibold text-2xl relative z-50 text-darken">
+            Our <span className="text-yellow-500">Commitment</span>
           </h1>
           <p className="py-5 text-justify">
             At the core of our consultancy is a commitment to personalized
@@ -110,7 +110,7 @@ export const AboutUs = () => {
             guidance and support. Our mission is to empower you with the
             knowledge, skills, and confidence to pursue your academic dreams on
             a global stage.
-            <br /> <br />
+            <br />
             Embark on your educational journey with a team that values your
             ambition as much as you do. We are here to provide clear, expert
             advice and support tailored to your individual needs. Contact us
