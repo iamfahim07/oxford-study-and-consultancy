@@ -1,8 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export const HeroSection = () => {
   return (
-    <div className="bg-cream">
+    <div className="bg-cream" id="home">
       <div className="max-w-screen-xl px-0 md:px-8 mx-auto flex flex-col lg:flex-row items-start">
         {/* <!--Left Col--> */}
         <div className="flex flex-col w-full lg:w-6/12 justify-center lg:pt-24 items-start text-center lg:text-left mb-5 md:mb-0">
@@ -14,9 +15,11 @@ export const HeroSection = () => {
             meet preparation, and your future begins to take shape
           </p>
           <div className="w-full md:flex items-center justify-center lg:justify-start md:space-x-5">
-            <button className="lg:mx-0 bg-yellow-500 text-white text-xl font-bold rounded-full py-4 px-9 focus:outline-none transform transition hover:scale-110 duration-300 ease-in-out z-50">
-              Book a Meating
-            </button>
+            <Link href="#contact">
+              <button className="lg:mx-0 bg-yellow-500 text-white text-xl font-bold rounded-full py-4 px-9 focus:outline-none transform transition hover:scale-110 duration-300 ease-in-out z-50">
+                Book a Meating
+              </button>
+            </Link>
           </div>
         </div>
         {/* <!--Right Col--> */}

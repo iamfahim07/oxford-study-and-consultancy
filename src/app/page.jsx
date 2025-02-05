@@ -1,3 +1,4 @@
+import { AboutUs } from "@/app/_components/about-us";
 import { Contact } from "@/app/_components/contact";
 import { CountriesWeWorkWith } from "@/app/_components/countries-we-work-with";
 import { HeroSection } from "@/app/_components/hero-section";
@@ -11,6 +12,7 @@ export default function Home() {
       <HeroSection />
       <Services />
       <CountriesWeWorkWith />
+      <AboutUs />
       <Contact />
     </main>
   );
