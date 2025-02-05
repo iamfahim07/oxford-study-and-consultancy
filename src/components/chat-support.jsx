@@ -219,6 +219,7 @@ export default function ChatSupport() {
                 >
                   <ChatBubble
                     key={message.id}
+                    className="max-w-[90%]"
                     variant={message.role === "user" ? "sent" : "received"}
                   >
                     <ChatBubbleAvatar
