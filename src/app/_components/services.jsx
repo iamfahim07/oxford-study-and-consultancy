@@ -15,7 +15,7 @@ export const Services = () => {
       id="services"
     >
       {/* <!-- Services --> */}
-      <div className="max-w-4xl mx-auto text-center">
+      <div className="max-w-4xl mx-auto text-center" data-aos="flip-up">
         <h1 className="font-bold text-darken my-3 text-3xl">
           <span className="text-yellow-500">What</span> We Bring to the Table
         </h1>
@@ -31,7 +31,10 @@ export const Services = () => {
 
       <Carousel className="max-md:relative max-md:flex max-md:flex-col">
         <CarouselContent className="mt-20 mb-6 max-md:flex max-md:flex-col max-md:gap-4">
-          <CarouselItem className="md:basis-1/2 lg:basis-1/3 max-md:mb-12">
+          <CarouselItem
+            className="md:basis-1/2 lg:basis-1/3 max-md:mb-12"
+            data-aos="fade-up"
+          >
             <div className="h-full bg-white shadow-xl max-md:pb-6 md:p-6 text-center rounded-xl">
               <div
                 style={{ background: "#5B72EE" }}
@@ -64,7 +67,11 @@ export const Services = () => {
             </div>
           </CarouselItem>
 
-          <CarouselItem className="md:basis-1/2 lg:basis-1/3  max-md:mb-12">
+          <CarouselItem
+            className="md:basis-1/2 lg:basis-1/3  max-md:mb-12"
+            data-aos="fade-up"
+            data-aos-delay="150"
+          >
             <div className="h-full bg-white shadow-xl max-md:pb-6 md:p-6 text-center rounded-xl">
               <div
                 style={{ background: "#F48C06" }}
@@ -98,7 +105,11 @@ export const Services = () => {
             </div>
           </CarouselItem>
 
-          <CarouselItem className="md:basis-1/2 lg:basis-1/3  max-md:mb-12">
+          <CarouselItem
+            className="md:basis-1/2 lg:basis-1/3  max-md:mb-12"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
             <div className="h-full bg-white shadow-xl max-md:pb-6 md:p-6 text-center rounded-xl">
               <div
                 style={{ background: "#2f327d" }}
@@ -137,7 +148,11 @@ export const Services = () => {
             </div>
           </CarouselItem>
 
-          <CarouselItem className="md:basis-1/2 lg:basis-1/3  max-md:mb-12">
+          <CarouselItem
+            className="md:basis-1/2 lg:basis-1/3  max-md:mb-12"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
             <div className="h-full bg-white shadow-xl max-md:pb-6 md:p-6 text-center rounded-xl">
               <div
                 style={{ background: "#57eb78" }}
@@ -163,7 +178,11 @@ export const Services = () => {
             </div>
           </CarouselItem>
 
-          <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+          <CarouselItem
+            className="md:basis-1/2 lg:basis-1/3"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
             <div className="h-full bg-white shadow-xl max-md:pb-6 md:p-6 text-center rounded-xl">
               <FreeCounsellingIcon />
               <h1 className="font-medium text-xl max-md:-mt-5 mb-3 lg:px-14 text-darken">

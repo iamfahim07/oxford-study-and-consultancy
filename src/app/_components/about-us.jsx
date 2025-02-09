@@ -1,11 +1,13 @@
+import Image from "next/image";
+
 export const AboutUs = () => {
   return (
     <div
-      className="container px-4 lg:px-12 mx-auto max-w-screen-xl text-gray-700 overflow-x-hidden py-20"
+      className="container px-4 lg:px-12 mx-auto max-w-screen-xl text-gray-700 overflow-x-hidden"
       id="about-us"
     >
       {/* <!-- About us --> */}
-      <div className="max-w-4xl mx-auto text-center">
+      <div className="max-w-4xl mx-auto text-center" data-aos="flip-up">
         <h1 className="font-bold text-darken my-3 text-3xl">
           <span className="text-yellow-500">Who</span> are we
         </h1>
@@ -22,7 +24,7 @@ export const AboutUs = () => {
 
       {/* <!-- Our Expertise --> */}
       <div className="sm:flex items-center gap-8 sm:space-x-8 mt-14">
-        <div className="relative">
+        <div className="relative" data-aos="fade-up">
           {/* <div className="bg-yellow-500 rounded-full absolute w-12 h-12 z-0 -left-4 -top-3 animate-pulse"></div> */}
           <h1 className="font-semibold text-2xl relative z-50 text-darken">
             Our <span className="text-yellow-500">Expertise</span>
@@ -42,7 +44,10 @@ export const AboutUs = () => {
 
       {/* <!-- IELTS Courses --> */}
       <div className="sm:flex flex-row-reverse items-center gap-8 sm:space-x-8 mt-14">
-        <div className="sm:w-1/2 relative sm:left-3 lg:left-32">
+        <div
+          className="sm:w-1/2 relative sm:left-3 lg:left-32"
+          data-aos="fade-left"
+        >
           <div className="bg-yellow-500 rounded-full absolute w-12 h-12 z-0 -left-4 -top-3 animate-pulse"></div>
           <h1 className="font-semibold text-2xl relative z-50 text-darken lg:pr-10">
             IELTS <span className="text-yellow-500">Courses</span>
@@ -54,15 +59,20 @@ export const AboutUs = () => {
             required by top institutions worldwide.
           </p>
         </div>
-        <div className="sm:w-1/2 relative !m-0 mt-10 sm:mt-0">
+        <div
+          className="sm:w-1/2 relative !m-0 mt-10 sm:mt-0"
+          data-aos="fade-right"
+        >
           <div
             style={{ background: "#23BDEE" }}
             className="floating w-24 h-24 absolute rounded-lg z-0 -top-3 -left-3"
           ></div>
-          <img
+          <Image
+            width={1000}
+            height={1000}
             className="rounded-xl z-40 relative"
             src="/teacher-explaining.png"
-            alt=""
+            alt="IELTS"
           />
           <div className="bg-yellow-500 w-40 h-40 floating absolute rounded-lg z-10 -bottom-3 -right-3"></div>
         </div>
@@ -70,7 +80,7 @@ export const AboutUs = () => {
 
       {/* <!-- English Language Courses --> */}
       <div className="sm:flex items-center gap-8 sm:space-x-8 mt-14">
-        <div className="sm:w-1/2 relative">
+        <div className="sm:w-1/2 relative" data-aos="fade-right">
           <div className="bg-yellow-500 rounded-full absolute w-12 h-12 z-0 -left-4 -top-3 animate-pulse"></div>
           <h1 className="font-semibold text-2xl relative z-50 text-darken lg:pr-10">
             English Language <span className="text-yellow-500">Courses</span>
@@ -82,15 +92,20 @@ export const AboutUs = () => {
             communication and academic success in international environments.
           </p>
         </div>
-        <div className="sm:w-1/2 relative !m-0 mt-10 sm:mt-0">
+        <div
+          className="sm:w-1/2 relative !m-0 mt-10 sm:mt-0"
+          data-aos="fade-left"
+        >
           <div
             style={{ background: "#23BDEE" }}
             className="floating w-24 h-24 absolute rounded-lg z-0 -top-3 -left-3"
           ></div>
-          <img
+          <Image
+            width={1000}
+            height={1000}
             className="rounded-xl z-40 relative"
             src="/teacher-explaining.png"
-            alt=""
+            alt="English Language"
           />
           <div className="bg-yellow-500 w-40 h-40 floating absolute rounded-lg z-10 -bottom-3 -right-3"></div>
         </div>
@@ -98,7 +113,7 @@ export const AboutUs = () => {
 
       {/* <!-- Our Commitment --> */}
       <div className="sm:flex items-center gap-8 sm:space-x-8 mt-14">
-        <div className="relative">
+        <div className="relative" data-aos="fade-down">
           {/* <div className="bg-yellow-500 rounded-full absolute w-12 h-12 z-0 -left-4 -top-3 animate-pulse"></div> */}
           <h1 className="font-semibold text-2xl relative z-50 text-darken">
             Our <span className="text-yellow-500">Commitment</span>
