@@ -5,11 +5,12 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Image from "next/image";
 
 export const CountriesWeWorkWith = () => {
   return (
-    <div className="max-md:px-4 max-md:py-20 md:p-20 bg-cream">
-      <div className="max-w-4xl mx-auto text-center mb-10">
+    <div className="container mx-auto bg-cream max-md:px-4 max-md:py-20 md:p-20 mb-20">
+      <div className="max-w-4xl mx-auto text-center mb-10" data-aos="flip-down">
         <h1 className="font-bold text-darken mb-2 text-3xl">
           {" "}
           <span className="text-yellow-500">Countries</span> We Offer Support
@@ -25,22 +26,40 @@ export const CountriesWeWorkWith = () => {
       </div>
       <Carousel className="max-md:relative">
         <CarouselContent>
-          <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+          <CarouselItem
+            className="md:basis-1/2 lg:basis-1/3"
+            data-aos="fade-up"
+          >
             <Card src="/usa.jpeg" name="USA" />
           </CarouselItem>
-          <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+          <CarouselItem
+            className="md:basis-1/2 lg:basis-1/3"
+            data-aos="fade-up"
+          >
             <Card src="/uk.png" name="UK" />
           </CarouselItem>
-          <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+          <CarouselItem
+            className="md:basis-1/2 lg:basis-1/3"
+            data-aos="fade-up"
+          >
             <Card src="/australia.webp" name="Australia" />
           </CarouselItem>
-          <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+          <CarouselItem
+            className="md:basis-1/2 lg:basis-1/3"
+            data-aos="fade-up"
+          >
             <Card src="/canada.webp" name="Canada" />
           </CarouselItem>
-          <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+          <CarouselItem
+            className="md:basis-1/2 lg:basis-1/3"
+            data-aos="fade-up"
+          >
             <Card src="/denmark.avif" name="Denmark" />
           </CarouselItem>
-          <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+          <CarouselItem
+            className="md:basis-1/2 lg:basis-1/3"
+            data-aos="fade-up"
+          >
             <Card src="/europe.jpg" name="Europe" />
           </CarouselItem>
         </CarouselContent>
@@ -56,7 +75,9 @@ const Card = ({ src, name }) => {
   return (
     <div className="h-[350px] p-5 bg-white shadow rounded overflow-hidden relative border border-gray-300 group">
       <div className="relative w-full h-full overflow-hidden">
-        <img
+        <Image
+          width={1000}
+          height={1000}
           src={src}
           alt={name}
           className="w-full h-full aspect-video object-cover rounded group-hover:scale-110 transition-all"

@@ -7,14 +7,25 @@ export const HeroSection = () => {
       <div className="max-w-screen-xl px-0 md:px-8 mx-auto flex flex-col lg:flex-row items-start">
         {/* <!--Left Col--> */}
         <div className="flex flex-col w-full lg:w-6/12 justify-center lg:pt-24 items-start text-center lg:text-left mb-5 md:mb-0">
-          <h1 className="w-full my-4 text-[40px] md:text-5xl font-bold leading-tight text-darken max-lg:text-center">
+          <h1
+            className="w-full my-4 text-[40px] md:text-5xl font-bold leading-tight text-darken max-lg:text-center"
+            data-aos="fade-right"
+          >
             <span className="text-yellow-500">Oxford</span> Study & Consultancy
           </h1>
-          <p className="leading-normal text-xl md:text-2xl mb-8">
+          <p
+            className="leading-normal text-xl md:text-2xl mb-8"
+            data-aos="fade-down"
+            data-aos-delay="300"
+          >
             Your dream of studying abroad starts right here, where opportunities
             meet preparation, and your future begins to take shape
           </p>
-          <div className="w-full md:flex items-center justify-center lg:justify-start md:space-x-5">
+          <div
+            className="w-full md:flex items-center justify-center lg:justify-start md:space-x-5"
+            data-aos="fade-up"
+            data-aos-delay="700"
+          >
             <Link href="/#contact">
               <button className="lg:mx-0 bg-yellow-500 text-white text-xl font-bold rounded-full py-4 px-9 focus:outline-none transform transition hover:scale-110 duration-300 ease-in-out z-50">
                 Book a Meating
@@ -23,7 +34,10 @@ export const HeroSection = () => {
           </div>
         </div>
         {/* <!--Right Col--> */}
-        <div className="flex justify-center items-center w-full lg:w-6/12 relative overflow-hidden">
+        <div
+          className="flex justify-center items-center w-full lg:w-6/12 relative overflow-hidden"
+          data-aos="fade-up"
+        >
           <Image
             className="w-[560px] -translate-x-24"
             width={560}
