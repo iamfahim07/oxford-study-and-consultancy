@@ -1,18 +1,25 @@
 "use client";
 
-import { cn } from "@/lib/utils";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+
+import { cn } from "@/lib/utils";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="w-full text-gray-700 bg-cream">
+    <div
+      className={cn(
+        "w-full h-28 text-gray-700 bg-cream",
+        isOpen && "max-md:h-fit"
+      )}
+    >
       <div className="flex flex-col max-w-screen-xl px-8 mx-auto md:items-center md:justify-between md:flex-row">
         <div className="flex flex-row items-center justify-between py-6">
           <div className="relative md:mt-8">
-            <img className="h-12" src="logo.png" />
+            <Image width={58} height={48} src="/logo.png" alt="Logo" />
           </div>
           <button
             className="rounded-lg md:hidden focus:outline-none focus:shadow-outline"
@@ -47,26 +54,26 @@ export const Navbar = () => {
         >
           <Link
             className="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline md:hover:scale-110"
-            href="#home"
+            href="/#home"
           >
             Home
           </Link>
 
           <Link
             className="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline md:hover:scale-110"
-            href="#services"
+            href="/#services"
           >
             Services
           </Link>
           <Link
             className="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline md:hover:scale-110"
-            href="#about-us"
+            href="/#about-us"
           >
             About Us
           </Link>
           <Link
             className="px-10 py-3 mt-2 text-sm text-center bg-yellow-500 text-white rounded-full md:mt-8 md:ml-4 md:hover:scale-110"
-            href="#contact"
+            href="/#contact"
           >
             Contact
           </Link>
