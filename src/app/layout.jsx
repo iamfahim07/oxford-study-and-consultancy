@@ -1,5 +1,8 @@
 import { Poppins } from "next/font/google";
+// import { NuqsAdapter } from "nuqs/adapters/next/app";
 import "./globals.css";
+
+import { NuqsClientAdapter } from "@/components/nuqs-client-adapter";
 
 import ChatSupport from "@/components/chat-support";
 
@@ -17,8 +20,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${poppins.className} antialiased`}>
-        {children}
-        <ChatSupport />
+        <NuqsClientAdapter>
+          {children}
+          <ChatSupport />
+        </NuqsClientAdapter>
       </body>
     </html>
   );

@@ -4,10 +4,17 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
+import { ServicesNavbarItem } from "@/components/services-navbar-item";
 import { cn } from "@/lib/utils";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isAccordionExpanded, setIsAccordionExpanded] = useState(null);
+
+  const handleNavItemClick = () => {
+    setIsAccordionExpanded(null);
+    setIsOpen(false);
+  };
 
   return (
     <div
@@ -50,7 +57,7 @@ export const Navbar = () => {
             "h-0 md:h-auto flex flex-col flex-grow md:items-center pb-4 md:pb-0 md:flex md:justify-end md:flex-row origin-top duration-300 *:transition",
             isOpen ? "h-full" : "max-md:scale-y-0"
           )}
-          onClick={() => setIsOpen(false)}
+          onClick={handleNavItemClick}
         >
           <Link
             className="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline md:hover:scale-110"
@@ -65,6 +72,12 @@ export const Navbar = () => {
           >
             Services
           </Link>
+          <ServicesNavbarItem
+            isAccordionExpanded={isAccordionExpanded}
+            setIsAccordionExpanded={setIsAccordionExpanded}
+            setIsOpen={setIsOpen}
+          />
+
           <Link
             className="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline md:hover:scale-110"
             href="/#about-us"
