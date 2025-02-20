@@ -5,6 +5,7 @@ import "./globals.css";
 import { NuqsClientAdapter } from "@/components/nuqs-client-adapter";
 
 import ChatSupport from "@/components/chat-support";
+import { Layout } from "@/components/layout";
 
 const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
@@ -21,7 +22,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${poppins.className} antialiased`}>
         <NuqsClientAdapter>
-          {children}
+          <Layout>{children}</Layout>
           <ChatSupport />
         </NuqsClientAdapter>
       </body>
