@@ -1,3 +1,5 @@
+import { BookOpenText, GraduationCap, NotebookPen, School } from "lucide-react";
+
 import { FreeCounsellingIcon } from "@/components/svg-assets";
 import {
   Carousel,
@@ -6,7 +8,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { BookOpenText, GraduationCap, NotebookPen, School } from "lucide-react";
 
 export const Services = () => {
   return (
