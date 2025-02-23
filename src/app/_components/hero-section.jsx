@@ -26,7 +26,7 @@ export const HeroSection = () => {
             data-aos="fade-up"
             data-aos-delay="700"
           >
-            <Link href="/#contact">
+            <Link href="/contact-us">
               <button className="lg:mx-0 bg-yellow-500 text-white text-xl font-bold rounded-full py-4 px-9 focus:outline-none transform transition hover:scale-110 duration-300 ease-in-out z-50">
                 Book a Meeting
               </button>

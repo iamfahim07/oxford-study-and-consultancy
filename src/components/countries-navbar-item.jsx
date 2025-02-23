@@ -8,14 +8,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-// import {
-//   DropdownMenu,
-//   DropdownMenuContent,
-//   DropdownMenuItem,
-//   DropdownMenuLabel,
-//   DropdownMenuSeparator,
-//   DropdownMenuTrigger,
-// } from "@/components/ui/dropdown-menu";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -27,32 +19,14 @@ import {
 
 import { cn } from "@/lib/utils";
 
-export const ServicesNavbarItem = ({
+export const CountriesNavbarItem = ({
   isAccordionExpanded,
   setIsAccordionExpanded,
   setIsOpen,
 }) => {
-  //   const [dropdownOpen, setDropdownOpen] = useState(false);
   const router = useRouter();
 
   const isTablet = useMedia("(max-width: 768px)", true);
-
-  //   const handleDropdown = (e) => {
-  //     e.stopPropagation();
-  //     setDropdownOpen(!dropdownOpen);
-  //   };
-
-  //   const handleScroll = (e, id) => {
-  //     e.preventDefault();
-  //     setDropdownOpen(false);
-
-  //     // delay the scroll to let the menu close smoothly
-  //     setTimeout(() => {
-  //       const target = document.getElementById(id);
-
-  //       target?.scrollIntoView();
-  //     }, 100);
-  //   };
 
   const handleAccordion = (id) => {
     setIsAccordionExpanded(null);
@@ -78,56 +52,61 @@ export const ServicesNavbarItem = ({
       >
         <AccordionItem className="border-none" value="item-1">
           <AccordionTrigger className="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline md:hover:scale-110 data-[state=open]:text-gray-900 justify-start gap-2 font-normal hover:no-underline">
-            Services
+            Academic Destinations
           </AccordionTrigger>
 
           <div className="bg-white *:cursor-pointer">
-            <AccordionContent
-              className="px-8 pt-6 pb-0"
-              onClick={() => handleAccordion("what-we-bring-to-the-table")}
-            >
-              What We Bring to the Table
+            <AccordionContent className="px-8 pt-6 pb-0" onClick={() => {}}>
+              USA
             </AccordionContent>
-            <AccordionContent
-              className="px-8 pt-6 pb-6"
-              onClick={() => handleAccordion("countries-we-offer-support")}
-            >
-              Countries We Offer Support
+            <AccordionContent className="px-8 pt-6 pb-0" onClick={() => {}}>
+              UK
+            </AccordionContent>
+            <AccordionContent className="px-8 pt-6 pb-0" onClick={() => {}}>
+              Australia
+            </AccordionContent>
+            <AccordionContent className="px-8 pt-6 pb-0" onClick={() => {}}>
+              Canada
+            </AccordionContent>
+            <AccordionContent className="px-8 pt-6 pb-0" onClick={() => {}}>
+              Germany
+            </AccordionContent>
+            <AccordionContent className="px-8 pt-6 pb-0" onClick={() => {}}>
+              Sweden
+            </AccordionContent>
+            <AccordionContent className="px-8 pt-6 pb-0" onClick={() => {}}>
+              France
+            </AccordionContent>
+            <AccordionContent className="px-8 pt-6 pb-0" onClick={() => {}}>
+              Denmark
+            </AccordionContent>
+            <AccordionContent className="px-8 pt-6 pb-0" onClick={() => {}}>
+              Finland
+            </AccordionContent>
+            <AccordionContent className="px-8 pt-6 pb-0" onClick={() => {}}>
+              Ireland
+            </AccordionContent>
+            <AccordionContent className="px-8 pt-6 pb-0" onClick={() => {}}>
+              Italy
+            </AccordionContent>
+            <AccordionContent className="px-8 pt-6 pb-0" onClick={() => {}}>
+              Hungary
+            </AccordionContent>
+            <AccordionContent className="px-8 pt-6 pb-0" onClick={() => {}}>
+              Romania
+            </AccordionContent>
+            <AccordionContent className="px-8 pt-6 pb-0" onClick={() => {}}>
+              Bulgaria
+            </AccordionContent>
+            <AccordionContent className="px-8 pt-6 pb-0" onClick={() => {}}>
+              Malta
+            </AccordionContent>
+            <AccordionContent className="px-8 pt-6 pb-6" onClick={() => {}}>
+              Cyprus
             </AccordionContent>
           </div>
         </AccordionItem>
       </Accordion>
-
-      // <DropdownMenu open={dropdownOpen} modal={false}>
-      //   <DropdownMenuTrigger
-      //     className="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline md:hover:scale-110 data-[state=open]:text-gray-900 data-[state=open]:scale-110"
-      //     onClick={(e) => handleDropdown(e)}
-      //   >
-      //     Services
-      //   </DropdownMenuTrigger>
-      //   <DropdownMenuContent className="text-gray-700">
-      //     <DropdownMenuLabel className="text-center text-darken">
-      //       <span className="text-yellow-500">Services</span> we provide
-      //     </DropdownMenuLabel>
-      //     <DropdownMenuSeparator />
-      //     <DropdownMenuItem
-      //       className="py-4 px-6"
-      //       onClick={(e) => handleScroll(e, "services")}
-      //     >
-      //       {/* <Link href="/#services"> */}
-      //       What We Bring to the Table
-      //       {/* </Link> */}
-      //     </DropdownMenuItem>
-      //     <DropdownMenuItem
-      //       className="py-4 px-6"
-      //       onClick={(e) => handleScroll(e, "countries-we-offer-support")}
-      //     >
-      //       {/* <Link href="/#countries-we-offer-support"> */}
-      //       Countries We Offer Support
-      //       {/* </Link> */}
-      //     </DropdownMenuItem>
-      //   </DropdownMenuContent>
-      // </DropdownMenu>
     );
   }
 
@@ -136,12 +115,12 @@ export const ServicesNavbarItem = ({
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger className="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline md:hover:scale-110 transition font-normal hover:!bg-transparent focus:bg-transparent data-[active]:bg-transparent data-[state=open]:bg-transparent data-[state=open]:scale-110 data-[state=open]:text-gray-900">
-            Services
+            Academic Destinations
           </NavigationMenuTrigger>
 
           <NavigationMenuContent>
             <ul className="w-[280px] flex flex-col">
-              <ListItem
+              {/* <ListItem
                 className="p-7 hover:text-white hover:bg-yellow-500"
                 title={"What We Bring to the Table"}
                 href="/what-we-bring-to-the-table"
@@ -165,7 +144,7 @@ export const ServicesNavbarItem = ({
                 preparation, compliance with requirements, or timely
                 submissions, we are committed to helping you achieve your
                 academic and professional goals.
-              </ListItem>
+              </ListItem> */}
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>

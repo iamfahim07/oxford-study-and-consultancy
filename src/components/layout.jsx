@@ -1,3 +1,4 @@
+import { Footer } from "@/app/_components/footer";
 import { Navbar } from "@/app/_components/navbar";
 
 export const Layout = ({ children }) => {
@@ -8,6 +9,7 @@ export const Layout = ({ children }) => {
         <div className="w-full h-28 bg-cream" />
         {children}
       </main>
+      <Footer />
     </div>
   );
 };

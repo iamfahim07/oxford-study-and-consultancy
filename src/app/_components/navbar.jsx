@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useMedia } from "react-use";
 
+import { CountriesNavbarItem } from "@/components/countries-navbar-item";
 import { ServicesNavbarItem } from "@/components/services-navbar-item";
 import {
   Sheet,
@@ -96,7 +97,9 @@ const NavHeader = ({ children }) => {
     >
       <div className="max-w-screen-xl w-full h-full flex flex-row items-center justify-between py-6 px-8 md:mx-auto">
         <div className="relative md:mt-8">
-          <Image width={58} height={48} src="/logo.png" alt="Logo" />
+          <Link href="/">
+            <Image width={58} height={48} src="/logo.png" alt="Logo" />
+          </Link>
         </div>
 
         {children}
@@ -122,17 +125,19 @@ const NavLink = ({ setIsOpen }) => {
     >
       <Link
         className="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline md:hover:scale-110"
-        href="/#home"
+        href="/"
       >
         Home
       </Link>
 
-      <Link
+      {/* <Link
         className="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline md:hover:scale-110"
-        href="/#services"
+        href="/what-we-bring-to-the-table"
       >
-        Services
-      </Link>
+        Academic Destinations
+      </Link> */}
+      <CountriesNavbarItem />
+
       <ServicesNavbarItem
         isAccordionExpanded={isAccordionExpanded}
         setIsAccordionExpanded={setIsAccordionExpanded}
@@ -141,13 +146,13 @@ const NavLink = ({ setIsOpen }) => {
 
       <Link
         className="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline md:hover:scale-110"
-        href="/#about-us"
+        href="/about-us"
       >
         About Us
       </Link>
       <Link
         className="px-10 py-3 mt-2 text-sm text-center bg-yellow-500 text-white rounded-full md:mt-8 md:ml-4 md:hover:scale-110"
-        href="/#contact"
+        href="/contact-us"
       >
         Contact
       </Link>
