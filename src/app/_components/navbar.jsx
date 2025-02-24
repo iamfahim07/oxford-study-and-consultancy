@@ -18,37 +18,28 @@ import {
 import { cn } from "@/lib/utils";
 
 export const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isNavSheetOpen, setIsNavSheetOpen] = useState(false);
 
   const isTablet = useMedia("(max-width: 768px)", true);
 
   // table view
   if (isTablet) {
     return (
-      <Sheet>
+      <Sheet open={isNavSheetOpen} onOpenChange={setIsNavSheetOpen}>
         <NavHeader>
           <SheetTrigger className="rounded-lg md:hidden focus:outline-none focus:shadow-outline">
             <svg fill="currentColor" viewBox="0 0 20 20" className="w-6 h-6">
-              {isOpen ? (
-                <path
-                  x-show="open"
-                  fillRule="evenodd"
-                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                  clipRule="evenodd"
-                ></path>
-              ) : (
-                <path
-                  x-show="!open"
-                  fillRule="evenodd"
-                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
-                  clipRule="evenodd"
-                ></path>
-              )}
+              <path
+                x-show="!open"
+                fillRule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                clipRule="evenodd"
+              />
             </svg>
           </SheetTrigger>
         </NavHeader>
         {/* <SheetTrigger>Open</SheetTrigger> */}
-        <SheetContent className="bg-cream z-[9999]">
+        <SheetContent className="bg-cream overflow-y-scroll z-[9999]">
           <SheetHeader>
             <SheetTitle>{/* Are you absolutely sure? */}</SheetTitle>
             <SheetDescription>
@@ -57,7 +48,7 @@ export const Navbar = () => {
             </SheetDescription>
           </SheetHeader>
 
-          <NavLink setIsOpen={setIsOpen} />
+          <NavLink setIsNavSheetOpen={setIsNavSheetOpen} />
         </SheetContent>
       </Sheet>
     );
@@ -65,7 +56,7 @@ export const Navbar = () => {
 
   return (
     <NavHeader>
-      <NavLink setIsOpen={setIsOpen} />
+      <NavLink />
     </NavHeader>
   );
 };
@@ -108,12 +99,12 @@ const NavHeader = ({ children }) => {
   );
 };
 
-const NavLink = ({ setIsOpen }) => {
-  const [isAccordionExpanded, setIsAccordionExpanded] = useState(null);
+const NavLink = ({ setIsNavSheetOpen }) => {
+  const [isAccordionExpanded, setIsAccordionExpanded] = useState(false);
 
   const handleNavItemClick = () => {
-    setIsAccordionExpanded(null);
-    setIsOpen(false);
+    setIsAccordionExpanded(false);
+    setIsNavSheetOpen?.(false);
   };
 
   return (
@@ -136,12 +127,12 @@ const NavLink = ({ setIsOpen }) => {
       >
         Academic Destinations
       </Link> */}
-      <CountriesNavbarItem />
+      <CountriesNavbarItem setIsNavSheetOpen={setIsNavSheetOpen} />
 
       <ServicesNavbarItem
         isAccordionExpanded={isAccordionExpanded}
         setIsAccordionExpanded={setIsAccordionExpanded}
-        setIsOpen={setIsOpen}
+        setIsNavSheetOpen={setIsNavSheetOpen}
       />
 
       <Link

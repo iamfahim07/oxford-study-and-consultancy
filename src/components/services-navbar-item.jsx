@@ -8,14 +8,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-// import {
-//   DropdownMenu,
-//   DropdownMenuContent,
-//   DropdownMenuItem,
-//   DropdownMenuLabel,
-//   DropdownMenuSeparator,
-//   DropdownMenuTrigger,
-// } from "@/components/ui/dropdown-menu";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -27,44 +19,35 @@ import {
 
 import { cn } from "@/lib/utils";
 
+const services = [
+  {
+    title: "What We Bring to the Table",
+    href: "what-we-bring-to-the-table",
+    description:
+      "We specialize in student visa consultancy, guiding aspiring students toward achieving their dreams of studying abroad. From university applications to visa processing, our expert team ensures a smooth journey, making your transition to international education seamless and stress-free.",
+  },
+  {
+    title: "Countries We Offer Support",
+    href: "countries-we-offer-support",
+    description:
+      "We provide comprehensive support for visa processing and admission assistance in the following countries. Our dedicated team ensures a seamless experience, guiding you through every step of the application process. Whether it’s document preparation, compliance with requirements, or timely submissions, we are committed to helping you achieve your academic and professional goals.",
+  },
+];
+
 export const ServicesNavbarItem = ({
   isAccordionExpanded,
   setIsAccordionExpanded,
-  setIsOpen,
+  setIsNavSheetOpen,
 }) => {
-  //   const [dropdownOpen, setDropdownOpen] = useState(false);
   const router = useRouter();
 
   const isTablet = useMedia("(max-width: 768px)", true);
 
-  //   const handleDropdown = (e) => {
-  //     e.stopPropagation();
-  //     setDropdownOpen(!dropdownOpen);
-  //   };
+  const handleAccordion = (href) => {
+    router.push(`/${href}`);
 
-  //   const handleScroll = (e, id) => {
-  //     e.preventDefault();
-  //     setDropdownOpen(false);
-
-  //     // delay the scroll to let the menu close smoothly
-  //     setTimeout(() => {
-  //       const target = document.getElementById(id);
-
-  //       target?.scrollIntoView();
-  //     }, 100);
-  //   };
-
-  const handleAccordion = (id) => {
-    setIsAccordionExpanded(null);
-    setIsOpen(false);
-    router.push(`/${id}`);
-
-    // delay the scroll to let the menu close smoothly
-    setTimeout(() => {
-      const target = document.getElementById(id);
-
-      target?.scrollIntoView();
-    }, 100);
+    setIsAccordionExpanded(false);
+    setIsNavSheetOpen?.(false);
   };
 
   if (isTablet) {
@@ -82,7 +65,22 @@ export const ServicesNavbarItem = ({
           </AccordionTrigger>
 
           <div className="bg-white *:cursor-pointer">
-            <AccordionContent
+            {services.map((service, index) => {
+              return (
+                <AccordionContent
+                  key={service.title}
+                  className={cn(
+                    "px-8 pt-6 pb-0",
+                    index === services.length - 1 && "pb-6"
+                  )}
+                  onClick={() => handleAccordion(service.href)}
+                >
+                  {service.title}
+                </AccordionContent>
+              );
+            })}
+
+            {/* <AccordionContent
               className="px-8 pt-6 pb-0"
               onClick={() => handleAccordion("what-we-bring-to-the-table")}
             >
@@ -93,41 +91,10 @@ export const ServicesNavbarItem = ({
               onClick={() => handleAccordion("countries-we-offer-support")}
             >
               Countries We Offer Support
-            </AccordionContent>
+            </AccordionContent> */}
           </div>
         </AccordionItem>
       </Accordion>
-
-      // <DropdownMenu open={dropdownOpen} modal={false}>
-      //   <DropdownMenuTrigger
-      //     className="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline md:hover:scale-110 data-[state=open]:text-gray-900 data-[state=open]:scale-110"
-      //     onClick={(e) => handleDropdown(e)}
-      //   >
-      //     Services
-      //   </DropdownMenuTrigger>
-      //   <DropdownMenuContent className="text-gray-700">
-      //     <DropdownMenuLabel className="text-center text-darken">
-      //       <span className="text-yellow-500">Services</span> we provide
-      //     </DropdownMenuLabel>
-      //     <DropdownMenuSeparator />
-      //     <DropdownMenuItem
-      //       className="py-4 px-6"
-      //       onClick={(e) => handleScroll(e, "services")}
-      //     >
-      //       {/* <Link href="/#services"> */}
-      //       What We Bring to the Table
-      //       {/* </Link> */}
-      //     </DropdownMenuItem>
-      //     <DropdownMenuItem
-      //       className="py-4 px-6"
-      //       onClick={(e) => handleScroll(e, "countries-we-offer-support")}
-      //     >
-      //       {/* <Link href="/#countries-we-offer-support"> */}
-      //       Countries We Offer Support
-      //       {/* </Link> */}
-      //     </DropdownMenuItem>
-      //   </DropdownMenuContent>
-      // </DropdownMenu>
     );
   }
 
@@ -141,7 +108,20 @@ export const ServicesNavbarItem = ({
 
           <NavigationMenuContent>
             <ul className="w-[280px] flex flex-col">
-              <ListItem
+              {services.map((service) => {
+                return (
+                  <ListItem
+                    key={service.title}
+                    className="p-7 hover:text-white hover:bg-yellow-500"
+                    title={service.title}
+                    href={`/${service.href}`}
+                  >
+                    {service.description}
+                  </ListItem>
+                );
+              })}
+
+              {/* <ListItem
                 className="p-7 hover:text-white hover:bg-yellow-500"
                 title={"What We Bring to the Table"}
                 href="/what-we-bring-to-the-table"
@@ -165,7 +145,7 @@ export const ServicesNavbarItem = ({
                 preparation, compliance with requirements, or timely
                 submissions, we are committed to helping you achieve your
                 academic and professional goals.
-              </ListItem>
+              </ListItem> */}
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
