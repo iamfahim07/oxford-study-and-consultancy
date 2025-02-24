@@ -19,91 +19,123 @@ import {
 
 import { cn } from "@/lib/utils";
 
-export const CountriesNavbarItem = ({
-  isAccordionExpanded,
-  setIsAccordionExpanded,
-  setIsOpen,
-}) => {
+const countries = [
+  {
+    title: "USA",
+    href: "usa",
+    description: "",
+  },
+  {
+    title: "UK",
+    href: "uk",
+    description: "",
+  },
+  {
+    title: "Australia",
+    href: "australia",
+    description: "",
+  },
+  {
+    title: "Canada",
+    href: "canada",
+    description: "",
+  },
+  {
+    title: "Germany",
+    href: "germany",
+    description: "",
+  },
+  {
+    title: "Sweden",
+    href: "sweden",
+    description: "",
+  },
+  {
+    title: "France",
+    href: "france",
+    description: "",
+  },
+  {
+    title: "Denmark",
+    href: "denmark",
+    description: "",
+  },
+  {
+    title: "Finland",
+    href: "finland",
+    description: "",
+  },
+  {
+    title: "Ireland",
+    href: "ireland",
+    description: "",
+  },
+  {
+    title: "Italy",
+    href: "italy",
+    description: "",
+  },
+  {
+    title: "Hungary",
+    href: "hungary",
+    description: "",
+  },
+  {
+    title: "Romania",
+    href: "romania",
+    description: "",
+  },
+  {
+    title: "Bulgaria",
+    href: "bulgaria",
+    description: "",
+  },
+  {
+    title: "Malta",
+    href: "malta",
+    description: "",
+  },
+  {
+    title: "Cyprus",
+    href: "cyprus",
+    description: "",
+  },
+];
+
+export const CountriesNavbarItem = ({ setIsNavSheetOpen }) => {
   const router = useRouter();
 
   const isTablet = useMedia("(max-width: 768px)", true);
 
-  const handleAccordion = (id) => {
-    setIsAccordionExpanded(null);
-    setIsOpen(false);
-    router.push(`/${id}`);
+  const handleAccordion = (href) => {
+    router.push(`/${href}`);
 
-    // delay the scroll to let the menu close smoothly
-    setTimeout(() => {
-      const target = document.getElementById(id);
-
-      target?.scrollIntoView();
-    }, 100);
+    setIsNavSheetOpen(false);
   };
 
   if (isTablet) {
     return (
-      <Accordion
-        value={isAccordionExpanded}
-        onValueChange={setIsAccordionExpanded}
-        type="single"
-        collapsible
-        onClick={(e) => e.stopPropagation()}
-      >
+      <Accordion type="single" collapsible onClick={(e) => e.stopPropagation()}>
         <AccordionItem className="border-none" value="item-1">
           <AccordionTrigger className="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline md:hover:scale-110 data-[state=open]:text-gray-900 justify-start gap-2 font-normal hover:no-underline">
             Academic Destinations
           </AccordionTrigger>
 
           <div className="bg-white *:cursor-pointer">
-            <AccordionContent className="px-8 pt-6 pb-0" onClick={() => {}}>
-              USA
-            </AccordionContent>
-            <AccordionContent className="px-8 pt-6 pb-0" onClick={() => {}}>
-              UK
-            </AccordionContent>
-            <AccordionContent className="px-8 pt-6 pb-0" onClick={() => {}}>
-              Australia
-            </AccordionContent>
-            <AccordionContent className="px-8 pt-6 pb-0" onClick={() => {}}>
-              Canada
-            </AccordionContent>
-            <AccordionContent className="px-8 pt-6 pb-0" onClick={() => {}}>
-              Germany
-            </AccordionContent>
-            <AccordionContent className="px-8 pt-6 pb-0" onClick={() => {}}>
-              Sweden
-            </AccordionContent>
-            <AccordionContent className="px-8 pt-6 pb-0" onClick={() => {}}>
-              France
-            </AccordionContent>
-            <AccordionContent className="px-8 pt-6 pb-0" onClick={() => {}}>
-              Denmark
-            </AccordionContent>
-            <AccordionContent className="px-8 pt-6 pb-0" onClick={() => {}}>
-              Finland
-            </AccordionContent>
-            <AccordionContent className="px-8 pt-6 pb-0" onClick={() => {}}>
-              Ireland
-            </AccordionContent>
-            <AccordionContent className="px-8 pt-6 pb-0" onClick={() => {}}>
-              Italy
-            </AccordionContent>
-            <AccordionContent className="px-8 pt-6 pb-0" onClick={() => {}}>
-              Hungary
-            </AccordionContent>
-            <AccordionContent className="px-8 pt-6 pb-0" onClick={() => {}}>
-              Romania
-            </AccordionContent>
-            <AccordionContent className="px-8 pt-6 pb-0" onClick={() => {}}>
-              Bulgaria
-            </AccordionContent>
-            <AccordionContent className="px-8 pt-6 pb-0" onClick={() => {}}>
-              Malta
-            </AccordionContent>
-            <AccordionContent className="px-8 pt-6 pb-6" onClick={() => {}}>
-              Cyprus
-            </AccordionContent>
+            {countries.map((country, index) => {
+              return (
+                <AccordionContent
+                  key={country.title}
+                  className={cn(
+                    "px-8 pt-6 pb-0",
+                    index === countries.length - 1 && "pb-6"
+                  )}
+                  onClick={() => handleAccordion(country.href)}
+                >
+                  {country.title}
+                </AccordionContent>
+              );
+            })}
           </div>
         </AccordionItem>
       </Accordion>
@@ -119,7 +151,20 @@ export const CountriesNavbarItem = ({
           </NavigationMenuTrigger>
 
           <NavigationMenuContent>
-            <ul className="w-[280px] flex flex-col">
+            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] h-[70vh] overflow-y-scroll [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-yellow-500">
+              {countries.map((country) => {
+                return (
+                  <ListItem
+                    key={country.title}
+                    className="p-7 hover:text-white hover:bg-yellow-500"
+                    title={country.title}
+                    href={`/${country.href}`}
+                  >
+                    {country.description}
+                  </ListItem>
+                );
+              })}
+
               {/* <ListItem
                 className="p-7 hover:text-white hover:bg-yellow-500"
                 title={"What We Bring to the Table"}
