@@ -1,4 +1,5 @@
-import { CountriesWeWorkWithSheet } from "@/components/countries-we-work-with-sheet";
+import Link from "next/link";
+
 import { ImageCard } from "@/components/image-card";
 import {
   Carousel,
@@ -71,7 +72,12 @@ export const CountriesWeWorkWith = () => {
       </Carousel>
 
       {/* sheet component */}
-      <CountriesWeWorkWithSheet />
+      {/* <CountriesWeWorkWithSheet /> */}
+      <Link href="/destinations">
+        <button className="px-5 py-3 border border-yellow-500 text-white bg-yellow-500 font-medium mt-8 focus:outline-none transform transition hover:bg-transparent hover:text-yellow-500 duration-300 ease-in-out rounded-full mx-auto block">
+          See more
+        </button>
+      </Link>
     </div>
   );
 };

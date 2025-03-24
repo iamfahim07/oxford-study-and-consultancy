@@ -39,7 +39,7 @@ export const Navbar = () => {
           </SheetTrigger>
         </NavHeader>
         {/* <SheetTrigger>Open</SheetTrigger> */}
-        <SheetContent className="bg-cream overflow-y-scroll z-[9999]">
+        <SheetContent className="px-0 bg-cream overflow-y-scroll z-[9999]">
           <SheetHeader>
             <SheetTitle>{/* Are you absolutely sure? */}</SheetTitle>
             <SheetDescription>
@@ -100,10 +100,10 @@ const NavHeader = ({ children }) => {
 };
 
 const NavLink = ({ setIsNavSheetOpen }) => {
-  const [isAccordionExpanded, setIsAccordionExpanded] = useState(false);
+  // const [isAccordionExpanded, setIsAccordionExpanded] = useState(false);
 
   const handleNavItemClick = () => {
-    setIsAccordionExpanded(false);
+    // setIsAccordionExpanded(false);
     setIsNavSheetOpen?.(false);
   };
 
@@ -121,17 +121,11 @@ const NavLink = ({ setIsNavSheetOpen }) => {
         Home
       </Link>
 
-      {/* <Link
-        className="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline md:hover:scale-110"
-        href="/what-we-bring-to-the-table"
-      >
-        Academic Destinations
-      </Link> */}
       <CountriesNavbarItem setIsNavSheetOpen={setIsNavSheetOpen} />
 
       <ServicesNavbarItem
-        isAccordionExpanded={isAccordionExpanded}
-        setIsAccordionExpanded={setIsAccordionExpanded}
+        // isAccordionExpanded={isAccordionExpanded}
+        // setIsAccordionExpanded={setIsAccordionExpanded}
         setIsNavSheetOpen={setIsNavSheetOpen}
       />
 
@@ -141,6 +135,7 @@ const NavLink = ({ setIsNavSheetOpen }) => {
       >
         About Us
       </Link>
+
       <Link
         className="px-10 py-3 mt-2 text-sm text-center bg-yellow-500 text-white rounded-full md:mt-8 md:ml-4 md:hover:scale-110"
         href="/contact-us"

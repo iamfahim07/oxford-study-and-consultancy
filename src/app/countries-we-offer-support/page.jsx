@@ -10,7 +10,7 @@ import {
 
 export default function CountriesWeOfferSupport() {
   return (
-    <div id="countries-we-offer-support">
+    <div>
       {/* heading text */}
       <div className="bg-cream px-4 md:px-20 py-8 mb-10">
         <div className="max-w-4xl mx-auto text-center" data-aos="flip-down">
