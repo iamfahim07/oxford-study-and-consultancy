@@ -109,7 +109,7 @@ export const CountriesNavbarItem = ({ setIsNavSheetOpen }) => {
   const isTablet = useMedia("(max-width: 768px)", true);
 
   const handleClick = (href) => {
-    router.push(`/destination/${href}`);
+    router.push(`/destinations/${href}`);
 
     isTablet && setIsNavSheetOpen(false);
   };
@@ -129,8 +129,9 @@ export const CountriesNavbarItem = ({ setIsNavSheetOpen }) => {
                   key={country.title}
                   className={cn(
                     "px-8 py-2",
+                    index === 0 && "!mt-2",
+                    index === countries.length - 1 && "!mb-2",
                     country_param === country.href && "text-white bg-yellow-500"
-                    // index === countries.length - 1 && "mb-6"
                   )}
                   onClick={() => handleClick(country.href)}
                 >
@@ -148,7 +149,10 @@ export const CountriesNavbarItem = ({ setIsNavSheetOpen }) => {
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline md:hover:scale-110 transition font-normal hover:!bg-transparent focus:bg-transparent data-[active]:bg-transparent data-[state=open]:bg-transparent data-[state=open]:scale-110 data-[state=open]:text-gray-900">
+          <NavigationMenuTrigger
+            className="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline md:hover:scale-110 transition font-normal hover:!bg-transparent focus:bg-transparent data-[active]:bg-transparent data-[state=open]:bg-transparent data-[state=open]:scale-110 data-[state=open]:text-gray-900"
+            onClick={() => router.push("/destinations")}
+          >
             Academic Destinations
           </NavigationMenuTrigger>
 

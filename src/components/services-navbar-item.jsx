@@ -25,17 +25,17 @@ const services = [
     description:
       "We specialize in student visa consultancy, guiding aspiring students toward achieving their dreams of studying abroad. From university applications to visa processing, our expert team ensures a smooth journey, making your transition to international education seamless and stress-free.",
   },
-  {
-    title: "Countries We Offer Support",
-    href: "countries-we-offer-support",
-    description:
-      "We provide comprehensive support for visa processing and admission assistance in the following countries. Our dedicated team ensures a seamless experience, guiding you through every step of the application process. Whether it’s document preparation, compliance with requirements, or timely submissions, we are committed to helping you achieve your academic and professional goals.",
-  },
+  // {
+  //   title: "Countries We Offer Support",
+  //   href: "countries-we-offer-support",
+  //   description:
+  //     "We provide comprehensive support for visa processing and admission assistance in the following countries. Our dedicated team ensures a seamless experience, guiding you through every step of the application process. Whether it’s document preparation, compliance with requirements, or timely submissions, we are committed to helping you achieve your academic and professional goals.",
+  // },
 ];
 
 export const ServicesNavbarItem = ({
-  isAccordionExpanded,
-  setIsAccordionExpanded,
+  // isAccordionExpanded,
+  // setIsAccordionExpanded,
   setIsNavSheetOpen,
 }) => {
   const router = useRouter();
@@ -47,15 +47,15 @@ export const ServicesNavbarItem = ({
   const handleClick = (href) => {
     router.push(`/${href}`);
 
-    isTablet && setIsAccordionExpanded(false);
+    // isTablet && setIsAccordionExpanded(false);
     isTablet && setIsNavSheetOpen?.(false);
   };
 
   if (isTablet) {
     return (
       <Accordion
-        value={isAccordionExpanded}
-        onValueChange={setIsAccordionExpanded}
+        // value={isAccordionExpanded}
+        // onValueChange={setIsAccordionExpanded}
         type="single"
         collapsible
         onClick={(e) => e.stopPropagation()}
