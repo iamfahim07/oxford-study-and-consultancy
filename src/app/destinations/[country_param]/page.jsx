@@ -59,10 +59,10 @@ export default async function Country({ params }) {
         <RoadSign>
           <RoadSignLeftArrow className="text-gray-700">
             <School className="w-12 h-12 mb-3" />
-            <h3 className="text-xl font-bold mb-5">
+            <h3 className="text-lg sm:text-xl font-bold mb-5">
               1. Acceptance from a UK University
             </h3>
-            <p>
+            <p className="text-sm sm:text-base">
               Before beginning your journey, it is crucial to receive formal
               acceptance from a UK academic institution. This is typically
               confirmed through the issuance of a Confirmation of Acceptance for
@@ -72,10 +72,10 @@ export default async function Country({ params }) {
 
           <RoadSignRightArrow>
             <BookText className="w-12 h-12 mb-3" />
-            <h3 className="text-xl font-bold mb-5">
+            <h3 className="text-lg sm:text-xl font-bold mb-5">
               2. English Language Proficiency
             </h3>
-            <p>
+            <p className="text-sm sm:text-base">
               Demonstrating proficiency in the English language is essential.
               This can be achieved by taking a certified English exam such as
               TOEFL, IELTS, or PTE Academic. It’s advisable to check the
@@ -86,10 +86,10 @@ export default async function Country({ params }) {
 
           <RoadSignLeftArrow className="text-gray-700">
             <FileText className="w-12 h-12 mb-3" />
-            <h3 className="text-xl font-bold mb-5">
+            <h3 className="text-lg sm:text-xl font-bold mb-5">
               3. Financial Requirements
             </h3>
-            <p>
+            <p className="text-sm sm:text-base">
               As part of the application process, applicants must prove they
               have sufficient funds to cover tuition and living expenses while
               studying. This may vary depending on the course duration and
@@ -100,8 +100,10 @@ export default async function Country({ params }) {
 
           <RoadSignRightArrow>
             <ScrollText className="w-12 h-12 mb-3" />
-            <h3 className="text-xl font-bold mb-5">4. Visa Application</h3>
-            <p>
+            <h3 className="text-lg sm:text-xl font-bold mb-5">
+              4. Visa Application
+            </h3>
+            <p className="text-sm sm:text-base">
               Students and those from specified nations must obtain a Tier 4
               (General) Student Visa to study in the United Kingdom. The visa
               application process involves several steps, including submitting
@@ -116,8 +118,10 @@ export default async function Country({ params }) {
 
           <RoadSignLeftArrow className="text-gray-700">
             <HeartPulse className="w-12 h-12 mb-3" />
-            <h3 className="text-xl font-bold mb-5">5. Health Insurance</h3>
-            <p>
+            <h3 className="text-lg sm:text-xl font-bold mb-5">
+              5. Health Insurance
+            </h3>
+            <p className="text-sm sm:text-base">
               Having adequate health insurance is essential while staying in the
               UK. Students studying for six months or more may be eligible to
               use the National Health Service (NHS), but it is important to
@@ -128,8 +132,10 @@ export default async function Country({ params }) {
 
           <RoadSignRightArrow>
             <ScrollText className="w-12 h-12 mb-3" />
-            <h3 className="text-xl font-bold mb-5">4. Visa Application</h3>
-            <p>
+            <h3 className="text-lg sm:text-xl font-bold mb-5">
+              6. Visa Application
+            </h3>
+            <p className="text-sm sm:text-base">
               Students and those from specified nations must obtain a Tier 4
               (General) Student Visa to study in the United Kingdom. The visa
               application process involves several steps, including submitting
@@ -228,7 +234,7 @@ export default async function Country({ params }) {
       </div>
 
       {/* study in the specific country universuty start */}
-      <div className="bg-cream py-24">
+      <div className="bg-cream py-24 hidden">
         <div>
           <div className="mb-10">
             <h1 className="text-3xl font-bold text-center text-darken">

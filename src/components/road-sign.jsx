@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useMedia } from "react-use";
 
 import { cn } from "@/lib/utils";
 
@@ -8,11 +9,13 @@ export const RoadSign = ({ className, children }) => {
   const containerRef = useRef(null);
   const [marginBottom, setMarginBottom] = useState(0);
 
+  const isDesktop = useMedia("(min-width: 1024px)", true);
+
   useEffect(() => {
     if (containerRef.current) {
       const childrenCount = containerRef.current.children.length;
       // Only apply the margin if there is an even number of child elements
-      if (childrenCount % 2 !== 0) {
+      if (childrenCount % 2 !== 0 && isDesktop) {
         const lastChild = containerRef.current.lastElementChild;
         if (lastChild) {
           const height = lastChild.offsetHeight;
@@ -24,7 +27,7 @@ export const RoadSign = ({ className, children }) => {
         setMarginBottom(0);
       }
     }
-  }, []);
+  }, [isDesktop]);
 
   return (
     <div

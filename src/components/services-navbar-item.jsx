@@ -61,7 +61,7 @@ export const ServicesNavbarItem = ({
         onClick={(e) => e.stopPropagation()}
       >
         <AccordionItem className="border-none" value="item-1">
-          <AccordionTrigger className="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline md:hover:scale-110 data-[state=open]:text-gray-900 justify-start gap-2 font-normal hover:no-underline">
+          <AccordionTrigger className="px-10 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline md:hover:scale-110 data-[state=open]:text-gray-900 justify-start gap-2 font-normal hover:no-underline">
             Services
           </AccordionTrigger>
 
