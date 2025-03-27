@@ -114,11 +114,10 @@ const NavLink = ({ setIsNavSheetOpen }) => {
       )}
       onClick={handleNavItemClick}
     >
-      <Link
-        className="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline md:hover:scale-110"
-        href="/"
-      >
-        Home
+      <Link href="/">
+        <p className="px-10 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline md:hover:scale-110">
+          Home
+        </p>
       </Link>
 
       <CountriesNavbarItem setIsNavSheetOpen={setIsNavSheetOpen} />
@@ -129,11 +128,10 @@ const NavLink = ({ setIsNavSheetOpen }) => {
         setIsNavSheetOpen={setIsNavSheetOpen}
       />
 
-      <Link
-        className="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline md:hover:scale-110"
-        href="/about-us"
-      >
-        About Us
+      <Link href="/about-us">
+        <p className="px-10 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline md:hover:scale-110">
+          About Us
+        </p>
       </Link>
 
       <Link

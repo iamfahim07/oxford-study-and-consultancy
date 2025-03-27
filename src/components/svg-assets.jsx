@@ -1,3 +1,5 @@
+import { cn } from "@/lib/utils";
+
 export const StudyAbroadIcon = () => {
   return (
     <div
@@ -120,10 +122,10 @@ export const PhoneIcon = () => {
   );
 };
 
-export const WhatsAppIcon = () => {
+export const WhatsAppIcon = ({ className }) => {
   return (
     <svg
-      className="h-6 w-6"
+      className={cn("h-6 w-6", className)}
       fill="#2f327d"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 448 512"
@@ -133,10 +135,10 @@ export const WhatsAppIcon = () => {
   );
 };
 
-export const EmailIcon = () => {
+export const EmailIcon = ({ className }) => {
   return (
     <svg
-      className="h-5 w-5"
+      className={cn("h-6 w-6", className)}
       fill="#2f327d"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 512 512"

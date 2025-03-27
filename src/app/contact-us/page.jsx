@@ -55,14 +55,14 @@ export default function ContactUs() {
               </p>
 
               <div className="flex justify-start items-center gap-2 mt-8">
-                <WhatsAppIcon />
+                <WhatsAppIcon className="w-[25px] h-[25px]" />
 
-                <p className="text-gray-500 font-semibold">+8801711742861</p>
+                <p className="text-gray-500">+8801711742861</p>
               </div>
               <div className="flex justify-start items-center gap-2 mt-2">
-                <EmailIcon />
+                <EmailIcon className="w-[23px] h-[23px]" />
                 <Link
-                  className="text-gray-500 font-semibold"
+                  className="text-gray-500"
                   href="mailto:oxfordstudyconsultancy@gmail.com"
                 >
                   oxfordstudyconsultancy@gmail.com
